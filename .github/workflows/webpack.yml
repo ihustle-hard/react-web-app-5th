@@ -67,8 +67,8 @@ jobs:
     runs-on: ubuntu-18.04
     
 
-### Using an action
-/ .github/workflows/webpack.yml
+### Using an action/ .github/workflows/webpack.yml
+
 - name: Setup Node
   uses: actions/setup-node@v1
   with:
