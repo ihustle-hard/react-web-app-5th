@@ -66,12 +66,6 @@ jobs:
     name: deploy to staging
     runs-on: ubuntu-18.04
     
-The available virtual machine types are:
-
-"ubuntu-latest, ubuntu-18.04, or ubuntu-16.04"
-"windows-latest or windows-2019"
-"macos-latest or macos-10.15"
-
 
 ### Using an action
 
