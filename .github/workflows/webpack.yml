@@ -53,13 +53,9 @@ on:
 
   
   ### Manually running a workflow
-  To manually run a workflow, you can configure your workflow to use the workflow_dispatch event. This enables a "Run workflow" button on the Actions tab.
-
+  
 on:
   workflow_dispatch:
-  
-  ** For more information, see "Manually running a workflow." **
-  "https://docs.github.com/en/actions/using-workflows#manually-running-a-workflow"
   
   ### Running your jobs on different operating systems
   GitHub Actions provides hosted runners for Linux, Windows, and macOS.
@@ -77,11 +73,8 @@ The available virtual machine types are:
 "windows-latest or windows-2019"
 "macos-latest or macos-10.15"
 
-** For more information, see "Virtual environments for GitHub Actions." **
-"https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners"
 
 ### Using an action
-Actions are reusable units of code that can be built and distributed by anyone on GitHub. You can find a variety of actions in GitHub Marketplace, and also in the official Actions repository.
 
 To use an action, you must specify the repository that contains the action. We also recommend that you specify a Git tag to ensure you are using a released version of the action.
 
@@ -90,16 +83,13 @@ To use an action, you must specify the repository that contains the action. We a
   with:
     node-version: '10.x'
     
-** For more information, see "Workflow syntax for GitHub Actions." **
-"https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsuses"
-
+    
 ### Running a command
 You can run commands on the job's virtual machine.
 
 - name: Install Dependencies
   run: npm install
   
-** For more information, see "Workflow syntax for GitHub Actions." **
 
 ### Running a job across a matrix of operating systems and runtime versions
 You can automatically run a job across a set of different values, such as different versions of code libraries or operating systems.
@@ -128,7 +118,6 @@ jobs:
         npm run build --if-present
         npm test
 
-** For more information, see "Workflow syntax for GitHub Actions." **
 
 ### Running steps or jobs conditionally
 GitHub Actions supports conditions on steps and jobs using data present in your workflow context.
@@ -139,5 +128,3 @@ steps:
 - run: npm publish
   if: github.event_name == 'push'
   
-** For more information, see "Contexts and expression syntax for GitHub Actions." **
-"https://docs.github.com/en/actions/learn-github-actions/contexts"
