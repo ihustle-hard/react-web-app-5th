@@ -48,15 +48,17 @@ on:
   schedule:
   - cron: "0 2 * * 1-5"
   
-  ** For more information, see "Events that trigger workflows." **
-  "https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows"
+** For more information, see "Events that trigger workflows." **
+"https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows"
   
   ### Manually running a workflow
   To manually run a workflow, you can configure your workflow to use the workflow_dispatch event. This enables a "Run workflow" button on the Actions tab.
 
 on:
   workflow_dispatch:
+  
   ** For more information, see "Manually running a workflow." **
+  "https://docs.github.com/en/actions/using-workflows#manually-running-a-workflow"
   
   ### Running your jobs on different operating systems
   GitHub Actions provides hosted runners for Linux, Windows, and macOS.
