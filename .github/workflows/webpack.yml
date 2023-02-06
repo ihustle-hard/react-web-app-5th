@@ -69,8 +69,6 @@ jobs:
 
 ### Using an action
 
-To use an action, you must specify the repository that contains the action. We also recommend that you specify a Git tag to ensure you are using a released version of the action.
-
 - name: Setup Node
   uses: actions/setup-node@v1
   with:
