@@ -1,12 +1,13 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-<meta charset="utf-8">
-<title>Shared workers: demo 3 inner frame</title>
-<pre id=log>Inner log:</pre>
-<script>
-  var worker = new SharedWorker('test.js');
-  var log = document.getElementById('log');
-  worker.port.onmessage = function(e) {
-   log.textContent += '\n' + e.data;
-  }
-</script>
+  <meta charset="utf-8" />
+  <title>Shared workers: demo 3 inner frame</title>
+  <pre id="log">Inner log:</pre>
+  <script>
+    var worker = new SharedWorker('test.js');
+    var log = document.getElementById('log');
+    worker.port.onmessage = function (e) {
+      log.textContent += '\n' + e.data;
+    };
+  </script>
+</html>

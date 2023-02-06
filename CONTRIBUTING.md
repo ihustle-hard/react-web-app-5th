@@ -28,17 +28,17 @@ Another interesting feature is the `subdfn` attribute. This is useful for when s
 
 In general we want to omit from the developer's edition:
 
-* Any Web IDL; instead, the `<dl class="domintro">` descriptions suffice.
-* The definitions of IDL attributes and operations as algorithmic steps (ditto).
-* Other instructions for user agents on how to implement a feature.
-* Definitions of low-level concepts and terms that do not impact web development.
+- Any Web IDL; instead, the `<dl class="domintro">` descriptions suffice.
+- The definitions of IDL attributes and operations as algorithmic steps (ditto).
+- Other instructions for user agents on how to implement a feature.
+- Definitions of low-level concepts and terms that do not impact web development.
 
 On the other hand, we want to especially keep:
 
-* High-level descriptions and introductions
-* Authoring instructions
-* Examples
-* Helpful notes about common situations
+- High-level descriptions and introductions
+- Authoring instructions
+- Examples
+- Helpful notes about common situations
 
 In between these clear-cut categories, there is some gray area. Please feel free to open an issue if you think something is being included that shouldn't be, or is being excluded but should be kept.
 
@@ -49,15 +49,19 @@ Due to the long legacy of the existing text the guidelines below are not always 
 Use a column width of 100 characters and add newlines where whitespace is used. (Emacs, set `fill-column` to `100`; in Vim, set `textwidth` to `100`; and in Sublime, set `wrap_width` to `100`. Alternatively, wrap the paragraph(s) with your changes with https://domenic.github.io/rewrapper/. Make sure that `column length to rewrap` is set to 100.)
 
 Using newlines between "inline" element tag names and their content is forbidden. (This actually alters the content, by adding spaces.) That is,
+
 ```html
    <dd><span>Parse error</span>. Create a new DOCTYPE token. Set its <i data-x="force-quirks
    flag">force-quirks flag</i> to …
 ```
+
 is fine and
+
 ```html
    <dd><span>Parse error</span>. Create a new DOCTYPE token. Set its <i data-x="force-quirks flag">
    force-quirks flag</i> to …
 ```
+
 is not.
 
 Using newlines between attributes and inside attribute values that contain whitespace is allowed.
@@ -67,6 +71,7 @@ An `<li>` element always has a `<p>` element inside it, unless it's a child of `
 
 List items (`<li>`, `<dt>`, and `<dd>`) always start on their own line with a newline between them
 and the previous list item. No extra newline at the start or end of the list though:
+
 ```html
  <ol>
   <li><p>Let <var>x</var> be 1.</p></li>
@@ -78,11 +83,14 @@ and the previous list item. No extra newline at the start or end of the list tho
 If a "block" element contains a single "block" element, do not put it on a new line.
 
 Do not indent for anything except a new "block" element. For instance
+
 ```html
    <li><p>Let <var>corsAttributeState</var> be the current state of the element's <code
    data-x="attr-link-crossorigin">crossorigin</code> content attribute.</p></li>
 ```
+
 is not indented, but
+
 ```html
       <li>
        <p>For each <var>element</var> in <var>candidate elements</var>, run the following
@@ -90,6 +98,7 @@ is not indented, but
 
        <ol>
 ```
+
 is.
 
 End tags must not be omitted (except where it is consistent to do so) and attribute values must be quoted (use double quotes).

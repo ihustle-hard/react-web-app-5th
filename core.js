@@ -1,13 +1,13 @@
 var start;
 onmessage = getStart;
 function getStart(event) {
-  start = 1*event.data;
+  start = 1 * event.data;
   onmessage = getEnd;
 }
 
 var end;
 function getEnd(event) {
-  end = 1*event.data;
+  end = 1 * event.data;
   onmessage = null;
   work();
 }

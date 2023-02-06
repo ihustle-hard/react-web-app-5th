@@ -1,10 +1,7 @@
 function handleMessage(e) {
-  if (e.data == "genkeys")
-    genkeys(e.ports[0]);
-  else if (e.data == "encrypt")
-    encrypt(e.ports[0]);
-  else if (e.data == "decrypt")
-    decrypt(e.ports[0]);
+  if (e.data == 'genkeys') genkeys(e.ports[0]);
+  else if (e.data == 'encrypt') encrypt(e.ports[0]);
+  else if (e.data == 'decrypt') decrypt(e.ports[0]);
 }
 
 function genkeys(p) {
@@ -14,7 +11,8 @@ function genkeys(p) {
 }
 
 function encrypt(p) {
-  var key, state = 0;
+  var key,
+    state = 0;
   p.onmessage = function (e) {
     if (state == 0) {
       key = e.data;
@@ -26,7 +24,8 @@ function encrypt(p) {
 }
 
 function decrypt(p) {
-  var key, state = 0;
+  var key,
+    state = 0;
   p.onmessage = function (e) {
     if (state == 0) {
       key = e.data;
@@ -38,11 +37,14 @@ function decrypt(p) {
 }
 
 // support being used as a shared worker as well as a dedicated worker
-if ('onmessage' in this) // dedicated worker
+if ('onmessage' in this)
+  // dedicated worker
   onmessage = handleMessage;
-else // shared worker
-  onconnect = function (e) { e.port.onmessage = handleMessage; }
-
+// shared worker
+else
+  onconnect = function (e) {
+    e.port.onmessage = handleMessage;
+  };
 
 // the "crypto" functions:
 
@@ -55,5 +57,5 @@ function _encrypt(k, s) {
 }
 
 function _decrypt(k, s) {
-  return s.substr(s.indexOf(' ')+1);
+  return s.substr(s.indexOf(' ') + 1);
 }

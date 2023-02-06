@@ -44,9 +44,9 @@ Validity (more often referred to as document conformance in the WHATWG) is a qua
 
 There are a number of ways to track changes to the standard:
 
-* The Twitter feed: [@htmlstandard](https://twitter.com/htmlstandard)
-* The [GitHub commits log](https://github.com/whatwg/html/commits)
-* The standard is available in the [Git repository](https://github.com/whatwg/html/). You may use any Git client to check out the latest version and use your client's diff tools to compare revisions and see what has been changed.
+- The Twitter feed: [@htmlstandard](https://twitter.com/htmlstandard)
+- The [GitHub commits log](https://github.com/whatwg/html/commits)
+- The standard is available in the [Git repository](https://github.com/whatwg/html/). You may use any Git client to check out the latest version and use your client's diff tools to compare revisions and see what has been changed.
 
 ### What are the various versions of the HTML Standard?
 
@@ -58,13 +58,13 @@ The W3C used to publish some [forked versions](https://wiki.whatwg.org/wiki/Fork
 
 Here are some sites to help you work out what you can use:
 
-* https://caniuse.com/
-* https://developer.mozilla.org/
+- https://caniuse.com/
+- https://developer.mozilla.org/
 
 The following sites also have some useful information:
 
-* https://html5doctor.com/
-* https://diveintohtml5.info/
+- https://html5doctor.com/
+- https://diveintohtml5.info/
 
 If you know of any more (or if you have some yourself) then send a pull request to add them to the list! (Or, if you think any of the above have lost usefulness over time, send a pull request removing them and outlining your reasoning.)
 
@@ -86,10 +86,10 @@ Sort of. Often some record of the rationale for a particular design choice can b
 
 For a few cases that someone did take the time document, the information can be found at the following locations:
 
-* [Rationale](https://wiki.whatwg.org/wiki/Rationale) — a page that documents some reasons behind decisions in the spec, originally written and maintained by Variable. If anyone wants to help him out, try to find someone via [Chat](https://whatwg.org/chat); we're always looking for more contributors and this is a good place to start.
-* [Why no namespaces](https://wiki.whatwg.org/wiki/Why_no_namespaces)
-* [Why no script implements](https://wiki.whatwg.org/wiki/Why_no_script_implements)
-* [Why not reuse legend](https://wiki.whatwg.org/wiki/Why_not_reuse_legend) or another _mini-header_ element.
+- [Rationale](https://wiki.whatwg.org/wiki/Rationale) — a page that documents some reasons behind decisions in the spec, originally written and maintained by Variable. If anyone wants to help him out, try to find someone via [Chat](https://whatwg.org/chat); we're always looking for more contributors and this is a good place to start.
+- [Why no namespaces](https://wiki.whatwg.org/wiki/Why_no_namespaces)
+- [Why no script implements](https://wiki.whatwg.org/wiki/Why_no_script_implements)
+- [Why not reuse legend](https://wiki.whatwg.org/wiki/Why_not_reuse_legend) or another _mini-header_ element.
 
 Also see [HTML feature proposals](#html-feature-proposals).
 
@@ -121,12 +121,12 @@ Excluding the string `"about:legacy-compat"`, the DOCTYPE is case insensitive in
 
 These alternatives were chosen because they meet the following criteria:
 
-* They trigger standards mode in all current and all relevant legacy browsers.
-* They are well-formed in XML.
-* It is possible to output at least one of the alternatives, if not both, with extant markup generators.
-* They intentionally contain no language version identifier so the DOCTYPE will remain usable for all future revisions of HTML.
-* The first is short and memorable to encourage its use.
-* The legacy-compat DOCTYPE is intentionally unattractive and self descriptive of purpose to discourage unnecessary use.
+- They trigger standards mode in all current and all relevant legacy browsers.
+- They are well-formed in XML.
+- It is possible to output at least one of the alternatives, if not both, with extant markup generators.
+- They intentionally contain no language version identifier so the DOCTYPE will remain usable for all future revisions of HTML.
+- The first is short and memorable to encourage its use.
+- The legacy-compat DOCTYPE is intentionally unattractive and self descriptive of purpose to discourage unnecessary use.
 
 ### Under what conditions should a DOCTYPE be used in a document delivered with an XML media type?
 
@@ -208,9 +208,9 @@ For HTML, it is strongly recommended that you specify the encoding using the HTT
 
 In addition, the following restrictions apply:
 
-* The character encoding name given must be the name of the character encoding used to serialize the file.
-* The character encoding declaration must be serialized without the use of character references or character escapes of any kind.
-* The `<meta>` element used for this purpose must occur within the first 512 bytes of the file. It is considered good practice for this to be the first child of the `<head>` element so that it is as close to the beginning of the file as possible.
+- The character encoding name given must be the name of the character encoding used to serialize the file.
+- The character encoding declaration must be serialized without the use of character references or character escapes of any kind.
+- The `<meta>` element used for this purpose must occur within the first 512 bytes of the file. It is considered good practice for this to be the first child of the `<head>` element so that it is as close to the beginning of the file as possible.
 
 Note that this `<meta>` element is different from HTML4, though it is compatible with many browsers because of the way encoding detection has been implemented.
 
@@ -238,11 +238,11 @@ Though the intent is that documents delivered with a `text/html` media type and 
 
 Case sensitivity:
 
-* Whenever possible, avoid testing `element.tagName` and `node.nodeName` (or do `toLowerCase()` before testing).
+- Whenever possible, avoid testing `element.tagName` and `node.nodeName` (or do `toLowerCase()` before testing).
 
 Namespaces:
 
-* Use the namespace-aware version for creating elements: `document.createElementNS(ns, elementName)`.
+- Use the namespace-aware version for creating elements: `document.createElementNS(ns, elementName)`.
 
 ### Why does the HTML Standard legitimize tag soup?
 
@@ -266,9 +266,9 @@ The spec allows `<a>` to contain blocks. It doesn't support putting `href=""` on
 
 Supporting `href` on any element has several problems associated with it that make it difficult to support in HTML. The main reason this isn't in HTML is that browser vendors have reported that implementing it would be extremely complex. Browser vendors get to decide what they implement, and there's no point to us telling them to do something they aren't going to do. In addition:
 
-* It isn't backwards compatible with existing browsers.
-* It adds no new functionality that can't already be achieved using the `a` element and a little script.
-* It doesn't make sense for all elements, such as interactive elements like `input` and `button`, where the use of href would interfere with their normal function.
+- It isn't backwards compatible with existing browsers.
+- It adds no new functionality that can't already be achieved using the `a` element and a little script.
+- It doesn't make sense for all elements, such as interactive elements like `input` and `button`, where the use of href would interfere with their normal function.
 
 The only advantage it seems to add is that it reduces typing for authors in some cases, but that is not a strong enough reason to support it in light of the other reasons.
 
@@ -324,15 +324,15 @@ It does. You can use [custom elements](https://html.spec.whatwg.org/multipage/cu
 
 Short of that, there are actually quite a number of ways for people to invent their own extensions to HTML:
 
-* Authors can use the `class` attribute to extend elements, effectively creating their own elements, while using the most applicable existing "real" HTML element, so that browsers and other tools that don't know of the extension can still support it somewhat well. This is the tack used by Microformats, for example.
-* Authors can include data for scripts to process using the `data-*=""` attributes. These are guaranteed to never be touched by browsers, and allow scripts to include data on HTML elements that scripts can then look for and process.
-* Authors can use the `<meta name="" content="">` mechanism to include page-wide metadata. Names should be registered on the wiki's [MetaExtensions](https://wiki.whatwg.org/wiki/MetaExtensions) page.
-* Authors can use the `rel=""` mechanism to annotate links with specific meanings. This is also used by Microformats. Names should be registered on the wiki's [RelExtensions](https://wiki.whatwg.org/wiki/RelExtensions) page.
-* Authors can embed raw data using the `<script type="">` mechanism with a custom type, for further handling by a script.
-* Authors can create plugins and invoke them using the `<embed>` element. This is how Flash works.
-* Authors can extend APIs using the JS prototyping mechanism. This is widely used by script libraries, for instance.
-* Authors can use the microdata feature (the `item=""` and `itemprop=""` attributes) to embed nested name-value pairs of data to be shared with other applications and sites.
-* Authors can propose new elements and attributes and, if the wider community and user-agent vendors agree that they are worth the effort, they can be added to the language.
+- Authors can use the `class` attribute to extend elements, effectively creating their own elements, while using the most applicable existing "real" HTML element, so that browsers and other tools that don't know of the extension can still support it somewhat well. This is the tack used by Microformats, for example.
+- Authors can include data for scripts to process using the `data-*=""` attributes. These are guaranteed to never be touched by browsers, and allow scripts to include data on HTML elements that scripts can then look for and process.
+- Authors can use the `<meta name="" content="">` mechanism to include page-wide metadata. Names should be registered on the wiki's [MetaExtensions](https://wiki.whatwg.org/wiki/MetaExtensions) page.
+- Authors can use the `rel=""` mechanism to annotate links with specific meanings. This is also used by Microformats. Names should be registered on the wiki's [RelExtensions](https://wiki.whatwg.org/wiki/RelExtensions) page.
+- Authors can embed raw data using the `<script type="">` mechanism with a custom type, for further handling by a script.
+- Authors can create plugins and invoke them using the `<embed>` element. This is how Flash works.
+- Authors can extend APIs using the JS prototyping mechanism. This is widely used by script libraries, for instance.
+- Authors can use the microdata feature (the `item=""` and `itemprop=""` attributes) to embed nested name-value pairs of data to be shared with other applications and sites.
+- Authors can propose new elements and attributes and, if the wider community and user-agent vendors agree that they are worth the effort, they can be added to the language.
 
 ### HTML should group `<dt>`s and `<dd>`s together in `<di>`s!
 
@@ -342,27 +342,27 @@ HTML allows `<div>` as a grouping element in `<dl>`. See [the `<dl>` specificati
 
 Although this would be convenient, the overall conclusion of the editors and of browser engine implementers is that expanding the [named character references](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references) list is not worth the cost to the ecosystem:
 
-* The backward-compatibility characteristics of such additions are bad. They do not add new capabilities, since you can already use numeric character references or unescaped code points; they just introduce new ways of writing the same thing, which will fail to display correctly in older browsers.
+- The backward-compatibility characteristics of such additions are bad. They do not add new capabilities, since you can already use numeric character references or unescaped code points; they just introduce new ways of writing the same thing, which will fail to display correctly in older browsers.
 
-* The benefits of such features can also be accomplished by preprocessor languages directly. That is, preprocessed languages that compile to HTML, such as Markdown, wiki syntax, JSX, or server-side templating systems, can add these capabilities themselves. The only reason to add these to the browser is to help people writing raw HTML. We do want to support people writing raw HTML, but features for that audience are less impactful than general web platform features, which weighs into the overall decision as to whether to add them or not.
+- The benefits of such features can also be accomplished by preprocessor languages directly. That is, preprocessed languages that compile to HTML, such as Markdown, wiki syntax, JSX, or server-side templating systems, can add these capabilities themselves. The only reason to add these to the browser is to help people writing raw HTML. We do want to support people writing raw HTML, but features for that audience are less impactful than general web platform features, which weighs into the overall decision as to whether to add them or not.
 
-* Most importantly, [the HTML parser is security sensitive](https://github.com/whatwg/html/issues/919#issuecomment-276329905). Any changes in it can cause mismatches between markup producers and markup consumers until everyone is updated to the latest version, which can lead to security bugs. This means that changes to the parser have to add an extreme amount of value to the ecosystem, to overcome this security hazard. Per the above points, our judgment is that adding or modifying named character references does not meet this bar.
+- Most importantly, [the HTML parser is security sensitive](https://github.com/whatwg/html/issues/919#issuecomment-276329905). Any changes in it can cause mismatches between markup producers and markup consumers until everyone is updated to the latest version, which can lead to security bugs. This means that changes to the parser have to add an extreme amount of value to the ecosystem, to overcome this security hazard. Per the above points, our judgment is that adding or modifying named character references does not meet this bar.
 
 ### Where's the harm in adding...?
 
 Every feature we add to the web platform has a cost:
 
-* Implementation: someone has to write code for it in each browser
-* Testing: someone has to write the tests to check the features is working
-* QA: someone has to regularly run the tests to make sure the feature doesn't regress
-* Code maintenance: when browser vendors refactor code, they have to refactor more code if there's more features
-* Tutorials: people who write tutorials have to include the feature, or handle feedback asking for them to do so
-* Cognitive load: authors learning the platform have more documentation to wade through even if they don't care about the feature
-* [Extra features discourage exploration](https://www.nngroup.com/articles/stagnating-expertise/): Having more features means less overall feature usage.
-* Page maintenance: authors have to know how to maintain the feature if other people have used it in pages they now maintain
-* Spec writing: someone has to write the spec for the feature and ensure it's maintained
-* Bug fixing: when bugs are found in the spec or implementations, someone has to figure out a fix, implement it, test it, ship it, tests have to be fixed, documentation has to be updated, etc
-* Code size: each feature increases the size of browsers (both on-disk binaries and in-memory resident size)
+- Implementation: someone has to write code for it in each browser
+- Testing: someone has to write the tests to check the features is working
+- QA: someone has to regularly run the tests to make sure the feature doesn't regress
+- Code maintenance: when browser vendors refactor code, they have to refactor more code if there's more features
+- Tutorials: people who write tutorials have to include the feature, or handle feedback asking for them to do so
+- Cognitive load: authors learning the platform have more documentation to wade through even if they don't care about the feature
+- [Extra features discourage exploration](https://www.nngroup.com/articles/stagnating-expertise/): Having more features means less overall feature usage.
+- Page maintenance: authors have to know how to maintain the feature if other people have used it in pages they now maintain
+- Spec writing: someone has to write the spec for the feature and ensure it's maintained
+- Bug fixing: when bugs are found in the spec or implementations, someone has to figure out a fix, implement it, test it, ship it, tests have to be fixed, documentation has to be updated, etc
+- Code size: each feature increases the size of browsers (both on-disk binaries and in-memory resident size)
 
 ## Using HTML
 
@@ -400,10 +400,10 @@ There are already many ways of marking up names already (e.g. the [hCard microfo
 
 Some hopefully helpful hints:
 
-* One way to look at it is how would you draw the page outline/table-of-contents? Each entry in the table of contents should be a `<section>`/`<article>`/`<aside>`/`<nav>`, and if it's not in the table of contents and doesn't have a heading, it should probably not be a `<section>`/`<article>`/`<aside>`/`<nav>`.
-* You can still use `<div>`. It's the right element if you need a styling hook because CSS can't give you enough to do what you want.
-* Generally, `<section>`s should start with a heading element containing the section title. It's not a hard-and-fast rule, but if you find yourself in a situation where a heading would be inappropriate, you probably want `<div>` rather than `<section>`.
-* Sections can contain articles, and vice versa. e.g. you can have a section that is news, a section that is editorials, a section that is sports, each with many articles, and each of those can have subsections, and each section can have comments, which are marked up using `<article>`, and each comment could be big enough that it has separate `<section>`s, and so on.
+- One way to look at it is how would you draw the page outline/table-of-contents? Each entry in the table of contents should be a `<section>`/`<article>`/`<aside>`/`<nav>`, and if it's not in the table of contents and doesn't have a heading, it should probably not be a `<section>`/`<article>`/`<aside>`/`<nav>`.
+- You can still use `<div>`. It's the right element if you need a styling hook because CSS can't give you enough to do what you want.
+- Generally, `<section>`s should start with a heading element containing the section title. It's not a hard-and-fast rule, but if you find yourself in a situation where a heading would be inappropriate, you probably want `<div>` rather than `<section>`.
+- Sections can contain articles, and vice versa. e.g. you can have a section that is news, a section that is editorials, a section that is sports, each with many articles, and each of those can have subsections, and each section can have comments, which are marked up using `<article>`, and each comment could be big enough that it has separate `<section>`s, and so on.
 
 ## WHATWG and the W3C HTML WG
 
@@ -423,9 +423,9 @@ In the case of W3C HTML WG participants in particular, there is a [conflict proc
 
 Here are some documents that detail the history of HTML:
 
-* [A feature history of the modern web platform](https://platform.html5.org/history/) (2003 onward) ([on GitHub](https://github.com/whatwg/platform.html5.org/blob/main/history/index.html))
-* [HTML's timeline on the W3C HTML WG wiki](https://www.w3.org/html/wg/wiki/History) (1997 to 2008)
-* [The history section in the HTML Standard itself](https://html.spec.whatwg.org/multipage/introduction.html#history-2)
+- [A feature history of the modern web platform](https://platform.html5.org/history/) (2003 onward) ([on GitHub](https://github.com/whatwg/platform.html5.org/blob/main/history/index.html))
+- [HTML's timeline on the W3C HTML WG wiki](https://www.w3.org/html/wg/wiki/History) (1997 to 2008)
+- [The history section in the HTML Standard itself](https://html.spec.whatwg.org/multipage/introduction.html#history-2)
 
 ## Other specifications
 
