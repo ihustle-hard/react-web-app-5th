@@ -68,7 +68,7 @@ jobs:
     
 
 ### Using an action
-
+/ .github/workflows/webpack.yml
 - name: Setup Node
   uses: actions/setup-node@v1
   with:
@@ -76,15 +76,12 @@ jobs:
     
     
 ### Running a command
-You can run commands on the job's virtual machine.
 
 - name: Install Dependencies
   run: npm install
   
 
 ### Running a job across a matrix of operating systems and runtime versions
-
-For example, this job uses a matrix strategy to run across 3 versions of Node and 3 operating systems:
 
 jobs:
   test:
@@ -110,8 +107,6 @@ jobs:
 
 
 ### Running steps or jobs conditionally
-
-For example, to run a step only as part of a push and not in a pull_request, you can specify a condition in the if: property based on the event name:
 
 steps:
 - run: npm publish
