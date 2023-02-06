@@ -37,28 +37,35 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-Created my-app at /root/node_modules/my-app/my-app
+Created my-app at /root/node_modules/my-app/my-app.
 Inside that directory, you can run several commands:
 
-  npm start
-    Starts the development server.
+Usage:
+ # npm start
 
-  npm run build
-    Bundles the app into static files for production.
+ Starts the development server.
 
-  npm test
-    Starts the test runner.
+Usage:
+ # npm run build
+    
+ Bundles the app into static files for production.
 
-  npm run eject
-    Removes this tool and copies build dependencies, configuration files
-    and scripts into the app directory. If you do this, you can’t go back!
+Usage:
+ # npm test
+    
+ Starts the test runner.
+
+ # npm run eject
+  
+ Removes this tool and copies build dependencies, configuration files and scripts into the app directory. If you do this, you can’t go back!
+
 
 We suggest that you begin by typing:
 
-  cd my-app
-  npm start
+ # cd my-app
+ # npm start
 
-## Learn More
+** Learn More **
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -67,7 +74,7 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+** Deploy on Vercel **
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
