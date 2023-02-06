@@ -51,7 +51,6 @@ on:
   
   ### in .github/workflows/webpack.yml 
 
-  "https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows"
   
   ### Manually running a workflow
   To manually run a workflow, you can configure your workflow to use the workflow_dispatch event. This enables a "Run workflow" button on the Actions tab.
