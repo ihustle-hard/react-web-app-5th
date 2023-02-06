@@ -1,5 +1,9 @@
 This repository hosts the [HTML Standard](https://html.spec.whatwg.org/).
-** WEB-APP **
+
+
+*** WEB-APP ***
+
+
 ** Code of conduct **
 
 We are committed to providing a friendly, safe and welcoming environment for all. Please read and respect the [WHATWG Code of Conduct](https://whatwg.org/code-of-conduct).
@@ -17,6 +21,7 @@ Tests are in the `html/` directory of the [web-platform-tests repository](https:
 As the `source` file is too large for [GitHub's blame utility](https://help.github.com/articles/tracing-changes-in-a-file/), use [blame for `source` on searchfox](https://searchfox.org/whatwg-html/source/source) instead.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
 
 ## Getting Started
 
@@ -39,34 +44,15 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 Created my-app at /root/node_modules/my-app/my-app.
 Inside that directory, you can run several commands:
 
-### run:
 
-npm start
-
-Starts the development server.
-
-### run:
-
-npm run build
-
-Bundles the app into static files for production.
-
-### run:
-
-npm test
-
-Starts the test runner.
-
-### run:
-
-npm run eject
-
-Removes this tool and copies build dependencies, configuration files and scripts into the app directory. If you do this, you can’t go back!
 
 ### We suggest that you begin by typing:
 
-$ cd my-app
-$ npm start
+```bash
+cd my-app
+ npm start
+ ```
+
 
 ** Learn More **
 
@@ -77,7 +63,8 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-** Deploy on Vercel **
+
+### Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
