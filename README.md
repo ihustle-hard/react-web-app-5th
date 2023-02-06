@@ -62,8 +62,8 @@ npm run eject
 
 
 ### We suggest that you begin by typing:
-cd my-app
-npm start
+$ cd my-app
+$ npm start
 
 ** Learn More **
 
