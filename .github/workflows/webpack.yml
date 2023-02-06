@@ -48,6 +48,9 @@ on:
   schedule:
   - cron: "0 2 * * 1-5"
   
+  
+  ### in .github/workflows/webpack.yml 
+  
   ** GitHub Actions
 / .github/workflows/webpack.yml." **
   "https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows"
